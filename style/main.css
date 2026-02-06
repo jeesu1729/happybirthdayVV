@@ -97,23 +97,53 @@ body {
 
 .six {
   position: relative;
-  top: 10vh;
+  top: 0;
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  padding-top: 50px;
+}
+
+.six img.profile-picture {
+  position: relative;
+  height: 180px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.six img.profile-picture:nth-of-type(2) {
+  position: relative;
+}
+
+.six img.profile-picture:nth-of-type(3) {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .six img {
   display: inline-block;
-  height: 350px;
-  max-width: 100%;
+  height: 180px;
+  max-width: 45%;
   /* height: auto; */
 }
 
 .six .hat {
-  left: 41.5%;
   position: absolute;
-  /* transform: scale(0.1); */
-  top: -35%;
-  width: 80px;
+  left: calc(50% + 10px);
+  top: 15px;
+  width: 50px;
+  z-index: 10;
+}
+
+.six .wish {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .baloons img {
