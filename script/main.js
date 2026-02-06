@@ -187,17 +187,20 @@ const animationTimeline = () => {
         },
         0.2
     )
-    .from(
-        ".profile-picture",
-        0.5, {
-            scale: 3.5,
-            opacity: 0,
-            x: 25,
-            y: -25,
-            rotationZ: -45,
-        },
-        "-=2"
-    )
+    .staggerFrom(
+    ".profile-picture",
+    0.6,
+    {
+        scale: 3,
+        opacity: 0,
+        y: 30,
+        rotationZ: -20,
+        ease: Power3.easeOut
+    },
+    0.3,
+    "-=2"
+)
+
     .from(".hat", 0.5, {
         x: -100,
         y: 350,
